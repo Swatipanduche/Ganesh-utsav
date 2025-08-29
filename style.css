@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baloo 2', cursive;
+  background: linear-gradient(rgba(255, 243, 224, 0.8), rgba(255, 224, 178, 0.8)),
+    url('bagroundganpati.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  overflow-x: hidden;
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #800000cc, #b22222cc);
+  text-align: center;
+  padding: 20px 0;
+  color: #FFD700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+header h1 {
+  font-family: 'Tiro Devanagari Marathi', serif;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px black;
+}
+
+nav {
+  margin-top: 12px;
+}
+
+nav a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: #FFE082;
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+  text-shadow: 1px 1px 3px #000;
+}
+
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #800000;
+  margin: 20px auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-family: 'Tiro Devanagari Marathi', serif;
+}
+
+
+.countdown {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.timer {
+  font-size: 1.8rem;
+  margin-top: 15px;
+  color: #D84315;
+  font-weight: bold;
+}
+
+.blink {
+  animation: blink 1s infinite alternate;
+  color: #e65100;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+#aarti {
+  text-align: center;
+  margin: 40px auto;
+}
+
+#aarti .subtext,
+#aarti .note {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #444;
+}
+
+.aarti-plate {
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+}
+
+.aarti-plate img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.rotate {
+  animation: rotatePlate 6s linear infinite;
+}
+
+@keyframes rotatePlate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gallery {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.about {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255, 248, 220, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about ul {
+  text-align: left;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.about li {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(255, 248, 220, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-container h1 {
+  text-align: center;
+  color: #800000;
+  margin-bottom: 20px;
+}
+
+.quiz-container .question {
+  margin: 15px 0;
+}
+
+.quiz-container label {
+  display: block;
+  margin: 5px 0;
+}
+
+.quiz-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #800000;
+  color: #FFD700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.quiz-container button:hover {
+  background: #b22222;
+}
+
+
+footer {
+  background: #800000;
+  color: #FFD700;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+.petal {
+  position: fixed;
+  top: -20px;
+  width: 10px;
+  height: 6px;
+  background: #FFD700;
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 9999;
+  pointer-events: none;
+  animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    margin: 0 12px;
+    font-size: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .about, .quiz-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 12px 0;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  nav {
+    margin-top: 8px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin: 15px auto;
+  }
+
+  .timer {
+    font-size: 1.4rem;
+  }
+
+  .aarti-plate {
+    width: 120px;
+    height: 120px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .gallery img {
+    height: 200px;
+  }
+
+  .about, .quiz-container {
+    padding: 18px;
+    font-size: 0.95rem;
+  }
+
+  .quiz-container button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  nav a {
+    margin: 4px 8px;
+    font-size: 0.85rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .timer {
+    font-size: 1.2rem;
+  }
+
+  .aarti-plate {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .gallery img {
+    height: 180px;
+  }
+
+  .about {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .quiz-container {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .quiz-container button {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 10px 0;
+  }
+}

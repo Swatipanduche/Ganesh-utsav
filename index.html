@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganesh Utsav 2025</title>
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi:wght@700&family=Baloo+2:wght@700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>श्री गणेश उत्सव २०२५</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <section class="countdown" id="home">
+    <h2>गणपती बाप्पा मोरया</h2>
+    <div class="timer" id="timer">Loading...</div>
+  </section>
+
+  <section id="aarti">
+    <h2>🙏 Ganpati Aarti 🙏</h2>
+    <p class="subtext">Listen to the devotional Aarti of Lord Ganesha</p>
+
+    <audio controls>
+      <source src="audio.mpeg" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="aarti-plate">
+      <img src="aartiplate.png" alt="Aarti Puja Plate">
+    </div>
+
+    <p class="note">🔊 Click ▶️ Play to start the Aarti</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Ganpati Bappa Gallery</h2>
+    <div class="gallery">
+      <img src="essentials/main.png" alt="Ganpati Idol decorated with flowers">
+      <img src="essentials/modak.png" alt="Ganpati with traditional decorations">
+      <img src="essentials/patak.png" alt="Ganpati celebrations at home">
+      <img src="essentials/onemore.png" alt="Ganpati mandal celebration">
+      <img src="essentials/emjoy.png" alt="Ganpati idol with devotees">
+      <img src="essentials/visarjan.png" alt="Eco-friendly Ganpati idol">
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>🕉️ About Ganesh Utsav</h2>
+    <p>🌸 <strong>Our Vision:</strong> Dedicated to preserving Indian culture, spirituality, and social values. Every
+      year, during Ganesh Utsav, we unite people to celebrate Lord Ganesha.</p>
+    <ul>
+      <li>Promote unity and devotion</li>
+      <li>Encourage eco-friendly celebrations</li>
+      <li>Showcase youth creativity</li>
+      <li>Preserve traditional values</li>
+      <li>Spread wisdom, peace, and positivity</li>
+    </ul>
+    <p>🌍 Ganpati Bappa inspires us to live with harmony and kindness. गणपती बाप्पा मोरया! 🌺</p>
+  </section>
+
+  <section class="quiz-container" id="quiz">
+    <h2>Ganesh Utsav Quiz</h2>
+    <form id="quizForm">
+      <div class="question">
+        <p>1. What is another name of Lord Ganesha?</p>
+        <label><input type="radio" name="q1" value="A" required> Vinayaka</label>
+        <label><input type="radio" name="q1" value="B"> Vishnu</label>
+        <label><input type="radio" name="q1" value="C"> Shiva</label>
+      </div>
+
+      <div class="question">
+        <p>2. Who are the parents of Lord Ganesha?</p>
+        <label><input type="radio" name="q2" value="A" required> Ram and Sita</label>
+        <label><input type="radio" name="q2" value="B"> Shiv & Parvati</label>
+        <label><input type="radio" name="q2" value="C"> Vishnu & Lakshmi</label>
+      </div>
+
+      <div class="question">
+        <p>3. How many days is Ganesh Chaturthi typically celebrated?</p>
+        <label><input type="radio" name="q3" value="A" required> 5 days</label>
+        <label><input type="radio" name="q3" value="B"> 10 days</label>
+        <label><input type="radio" name="q3" value="C"> 15 days</label>
+      </div>
+
+      <div class="question">
+        <p>4. In which month does Ganesh Chaturthi usually fall?</p>
+        <label><input type="radio" name="q4" value="A" required> Shravan</label>
+        <label><input type="radio" name="q4" value="B"> Kartik</label>
+        <label><input type="radio" name="q4" value="C"> Bhadrapad</label>
+      </div>
+
+      <div class="question">
+        <p>5. What is Lord Ganesha's vehicle (vahana)?</p>
+        <label><input type="radio" name="q5" value="A" required> Peacock</label>
+        <label><input type="radio" name="q5" value="B"> Mouse</label>
+        <label><input type="radio" name="q5" value="C"> Lion</label>
+      </div>
+
+      <button type="submit">Submit Quiz</button>
+    </form>
+    <div id="result"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ganesh Utsav | गणपती बाप्पा मोरया</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
